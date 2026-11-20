@@ -37,10 +37,6 @@ architecture BEH of CNV is
     signal c_dff_in  : std_logic;
     signal c_dff_out : std_logic_vector(9 downto 0);
 
-    -- DFF enable
-    signal a_enable : std_logic;
-    signal c_enable : std_logic;
-
     -- Declare component DFF_N
     component DFF_N is
         generic ( N : natural := 8 );
@@ -91,10 +87,10 @@ begin
         if rst = '0' then
 
             o_valid <= '0';
-            a_enable <= '0';
-            c_enable <= '0';
             a_k_out <= '0';
             c_k <= '0';
+            c_dff_in <= '0';
+            a_dff_in <= '0';
 
         elsif rising_edge(clk) then
             
@@ -107,9 +103,6 @@ begin
                 -- Put the new values in the register
                 a_dff_in <= a_k_in;
                 c_dff_in <= xor_result;
-
-                a_enable <= '1';
-                c_enable <= '1';
                 
                 o_valid <= '1';
             
@@ -117,8 +110,7 @@ begin
 
                 -- Next to invalid bit
                 o_valid <= '0'; 
-                a_enable <= '0';
-                c_enable <= '0';
+                c_k <= '0';
 
             end if;
 
