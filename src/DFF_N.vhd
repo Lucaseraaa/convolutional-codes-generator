@@ -20,6 +20,9 @@ entity DFF_N is
 end entity;
 
 architecture struct of DFF_N is
+ 
+  signal q_int : std_logic_vector(N - 1 downto 0) := (others => '0');
+
 begin
 
   p_DFF_N : process(clk, arstn)
@@ -30,10 +33,12 @@ begin
       if en = '1' then
         
         -- Get d on the first position
-        q <= q(N-2 downto 0) & d;
+        q_int <= q_int(N-2 downto 0) & d;
         
       end if;
     end if;
   end process;
+
+  q <= q_int;
 
 end architecture;
