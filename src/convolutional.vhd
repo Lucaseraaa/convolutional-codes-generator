@@ -28,8 +28,6 @@ end entity;
 
 architecture BEH of CNV is 
 
-    -- Signals --
-
     -- Signal in input/output to "a" buffer
     signal a_dff_in  : std_logic;
     signal a_dff_out : std_logic_vector(4 downto 0);
@@ -73,6 +71,44 @@ begin
             d => c_dff_in,
             q => c_dff_out
         );
+    
+
+    -- Process used to generate convolutional bit 
+    p_CONV: process(clk, rst)
+
+        -- Variable used to keep the xor result
+        variable xor_result : std_logic;
+
+    begin
+
+        xor_result := '0';
+
+        if rst = '0' then 
+
+        elsif rising_edge(clk) then
+            
+            if i_valid = '1' then
+
+                a_k_out <= a_k_in;
+                xor_result := (a_diff_out(8) xor a_diff_out(9)) xor ( a_k_in xor (a_diff_out(3) xor a_diff_out(4))); -- redundancy bit generator
+                c_k <= xor_result;
+
+                -- Put the new values in the register
+                a_dff_in <= a_k_in;
+                c_dff_in <= xor_result;
+                
+                o_valid <= '1';
+            
+            else
+
+                -- Next to invalid bit
+                o_valid <= '0'; 
+
+            end if;
+
+        end if;
+
+    end process;
     
     
 
