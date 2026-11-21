@@ -21,19 +21,19 @@ end entity;
 
 architecture struct of DFF_N is
  
-  signal q_int : std_logic_vector(N - 1 downto 0) := (others => '0');
+  signal q_int : std_logic_vector(N - 1 downto 0);
 
 begin
 
   p_DFF_N : process(clk, arstn)
   begin
     if arstn = '0' then
-      q <= (others => '0');
+      q_int <= (others => '0');
     elsif rising_edge(clk) then
       if en = '1' then
         
         -- Get d on the first position
-        q_int <= q_int(N-2 downto 0) & d;
+        q_int <= q_int(N - 2 downto 0) & d;
         
       end if;
     end if;

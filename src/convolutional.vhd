@@ -7,7 +7,7 @@ entity CNV is
     generic (
         K : positive := 11;
         A_BUFFER_LENGHT : positive := 5;
-        C_BUFFER_LENGHT : positive := 10
+        C_BUFFER_LENGHT : positive := 11
     );
     port (
         -- Signals
@@ -30,12 +30,15 @@ end entity;
 architecture BEH of CNV is 
 
     -- Signal in input/output to "a" buffer
-    signal a_dff_in  : std_logic;
     signal a_dff_out : std_logic_vector(4 downto 0);
 
     -- Signal in input/output to "c" buffer
-    signal c_dff_in  : std_logic;
-    signal c_dff_out : std_logic_vector(9 downto 0);
+    signal c_dff_out : std_logic_vector(10 downto 0);
+
+    -- Signal used to enable the two DFF_N
+    signal en_dff    : std_logic;
+
+    signal c_new     : std_logic;
 
     -- Declare component DFF_N
     component DFF_N is
@@ -51,14 +54,17 @@ architecture BEH of CNV is
 
 begin
 
+    en_dff <= '1' when (i_valid = '1' and (a_k_in = '0' or a_k_in = '1')) else '0';
+    c_new <= c_dff_out(7) xor c_dff_out(9) xor a_k_in xor a_dff_out(2) xor a_dff_out(3);
+
     -- DFF of last occours of a
     DFF_A_BUFFER : DFF_N
         generic map (N => A_BUFFER_LENGHT)
         port map(
             clk => clk,
             arstn => rst,
-            en => i_valid,
-            d => a_dff_in,
+            en => en_dff,
+            d => a_k_in,
             q => a_dff_out
         );
     
@@ -68,8 +74,8 @@ begin
         port map(
             clk => clk,
             arstn => rst,
-            en => i_valid,
-            d => c_dff_in,
+            en => en_dff,
+            d => c_new,
             q => c_dff_out
         );
     
@@ -77,43 +83,24 @@ begin
     -- Process used to generate convolutional bit 
     p_CONV: process(clk, rst)
 
-        -- Variable used to keep the xor result
-        variable xor_result : std_logic;
-
     begin
 
-        xor_result := '0';
-
         if rst = '0' then
-
-            o_valid <= '0';
             a_k_out <= '0';
-            c_k <= '0';
-            c_dff_in <= '0';
-            a_dff_in <= '0';
-
+            c_k     <= '0';
+            o_valid <= '0';
+        
         elsif rising_edge(clk) then
+
+            o_valid <= en_dff;           
             
-            if i_valid = '1' then
-
-                a_k_out <= a_k_in;
-                xor_result := (c_dff_out(0) xor c_dff_out(1)) xor ( a_k_in xor (a_dff_out(0) xor a_dff_out(1))); -- redundancy bit generator
-                c_k <= xor_result;
-
-                -- Put the new values in the register
-                a_dff_in <= a_k_in;
-                c_dff_in <= xor_result;
+            if en_dff = '1' then
                 
-                o_valid <= '1';
+                a_k_out <= a_k_in;
+                c_k     <= c_new;
             
-            else
-
-                -- Next to invalid bit
-                o_valid <= '0'; 
-                c_k <= '0';
-
             end if;
-
+        
         end if;
 
     end process;
