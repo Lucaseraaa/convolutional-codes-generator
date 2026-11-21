@@ -38,7 +38,6 @@ architecture BEH of CONV is
 begin
 
     p_CONV: process(clk, rst)
-    variable xor_result : std_logic;
 
     begin
         xor_result := '0';
@@ -59,8 +58,9 @@ begin
 
             -- Valid input
             if i_valid = '1' then
-
-                xor_result := c_buffer(8) xor c_buffer(10) xor a_k_in xor a_buffer(3) xor a_buffer(4); 
+                
+                -- xor combination result
+                xor_result := c_buffer(7) xor c_buffer(9) xor a_k_in xor a_buffer(2) xor a_buffer(3); 
                 
                 -- Update de redundancy bit
                 c_k <= xor_result;
