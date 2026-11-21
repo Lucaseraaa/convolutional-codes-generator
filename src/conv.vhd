@@ -2,7 +2,7 @@ library IEEE;
     use IEEE.std_logic_1164.all;
 
 -- Convolutional Codes Generator entity
-entity CNV is
+entity CONV is
 
     generic (
         K : positive := 11;
@@ -27,9 +27,44 @@ entity CNV is
 
 end entity;
 
-architecture BEH of CNV is 
+architecture BEH of CONV is 
+
+    -- A and C buffer
+    -- signal a_buffer : std_logic_vector(4 downto 0);
+    -- signal c_buffer : std_logic_vector(10 downto 0);
+
 
 begin
+
+    p_CONV: process(clk, rst)
+
+    begin
+
+        if rst = '0' then
+
+            -- Reset
+            a_k_out <= '0';
+            c_k <= '0';
+            o_valid <= '0';
+
+        elsif rising_edge(clk) then
+            
+            -- Base setup o_valid to 0
+            o_valid <= '0';
+
+            -- Valid input
+            if i_valid = '1' then
+                
+                -- Update de redundancy bit
+                c_k <= not a_k_in;
+                a_k_out <= a_k_in;
+                o_valid <= '1';
+
+            end if;
+        
+        end if;
+
+    end process;
 
 
 end architecture;
