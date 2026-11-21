@@ -6,10 +6,11 @@ entity CONV is
 
     generic (
         K : positive := 11;
-        A_BUFFER_LENGHT : positive := 5;
-        C_BUFFER_LENGHT : positive := 11
+        A_BUFFER_LENGTH : positive := 5;
+        C_BUFFER_LENGTH : positive := 11
     );
     port (
+
         -- Signals
         clk     : in std_logic;
         rst     : in std_logic; -- active-low
@@ -30,8 +31,8 @@ end entity;
 architecture BEH of CONV is 
 
     -- A and C buffer
-    -- signal a_buffer : std_logic_vector(4 downto 0);
-    -- signal c_buffer : std_logic_vector(10 downto 0);
+    signal a_buffer : std_logic_vector(A_BUFFER_LENGTH - 1 downto 0);
+    signal c_buffer : std_logic_vector(C_BUFFER_LENGTH - 1 downto 0);
 
 
 begin
@@ -46,6 +47,8 @@ begin
             a_k_out <= '0';
             c_k <= '0';
             o_valid <= '0';
+            a_buffer <= (others => '0');
+            c_buffer <= (others => '0');
 
         elsif rising_edge(clk) then
             
@@ -57,8 +60,12 @@ begin
                 
                 -- Update de redundancy bit
                 c_k <= not a_k_in;
-                a_k_out <= a_k_in;
                 o_valid <= '1';
+                a_k_out <= a_k_in;
+
+                -- Update the buffer value
+                a_buffer <= a_buffer(A_BUFFER_LENGTH - 2 downto 0) & a_k_in;
+                c_buffer <= c_buffer(C_BUFFER_LENGTH - 2 downto 0) & (not a_k_in);
 
             end if;
         
