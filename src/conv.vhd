@@ -38,7 +38,7 @@ architecture BEH of CONV is
 begin
 
     p_CONV: process(clk, rst)
-
+        variable xor_result : std_logic;
     begin
         xor_result := '0';
 
