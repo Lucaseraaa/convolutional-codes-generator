@@ -22,3 +22,11 @@ entity CONV_GENERATOR is
     );
 
 end entity;
+
+architecture BEH of CODE_GENERATOR is 
+
+begin
+
+    conv_output <= c_latest(8) + c_latest(10) + a_in + a_latest(3) + a_latest(4);
+
+end architecture;
