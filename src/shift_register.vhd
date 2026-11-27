@@ -25,7 +25,7 @@ architecture struct of SHIFT_REG_N is
 
 begin
 
-  p_DFF_N : process(clk, arstn)
+  p_SHIFT_REG_N : process(clk, arstn)
   begin
     if rst = '0' then
       
