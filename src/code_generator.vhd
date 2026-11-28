@@ -18,15 +18,15 @@ entity CONV_GENERATOR is
         a_in        : in    std_logic; -- Current input
         a_latest    : in    std_logic_vector(A_WIDTH - 1 downto 0); -- input buffer
         c_latest    : in    std_logic_vector(C_WIDTH - 1 downto 0); -- c buffer
-        conv_output : out   std_logic;
+        conv_output : out   std_logic
     );
 
 end entity;
 
-architecture BEH of CODE_GENERATOR is 
+architecture BEH of CONV_GENERATOR is 
 
 begin
 
-    conv_output <= c_latest(8) + c_latest(10) + a_in + a_latest(3) + a_latest(4);
+    conv_output <= (c_latest(8) xor c_latest(10)) xor (a_in xor (a_latest(3) xor a_latest(4)));
 
 end architecture;

@@ -25,7 +25,7 @@ architecture struct of SHIFT_REG_N is
 
 begin
 
-  p_SHIFT_REG_N : process(clk, arstn)
+  p_SHIFT_REG_N : process(clk, rst)
   begin
     if rst = '0' then
       
@@ -36,7 +36,7 @@ begin
       if en = '1' then
         
         -- Get d on the first position
-        q_int <= q_int(N - 2 downto 0) & d;
+        q_int <= q_int(WIDTH - 2 downto 0) & d;
         
       end if;
     end if;

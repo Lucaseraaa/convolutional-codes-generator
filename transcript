@@ -1,0 +1,281 @@
+# Loading project project
+# Compile of convolutional.vhd failed with 1 errors.
+# Compile of tb_CNV.vhd was successful.
+# Compile of conv.vhd was successful.
+# Compile of tb_CNV2.vhd was successful.
+# Compile of code_generator.vhd failed with 1 errors.
+# Compile of CNV_tb2.vhd was successful.
+# 6 compiles, 3 failed with 2 errors.
+# Compile of convolutional.vhd failed with 1 errors.
+# Compile of tb_CNV.vhd was successful.
+# Compile of conv.vhd was successful.
+# Compile of tb_CNV2.vhd was successful.
+# Compile of code_generator.vhd failed with 1 errors.
+# Compile of CNV_tb2.vhd was successful.
+# 6 compiles, 3 failed with 2 errors.
+# Compile of convolutional.vhd failed with 1 errors.
+# Compile of tb_CNV.vhd was successful.
+# Compile of conv.vhd was successful.
+# Compile of tb_CNV2.vhd was successful.
+# Compile of code_generator.vhd failed with 1 errors.
+# Compile of CNV_tb2.vhd was successful.
+# 6 compiles, 2 failed with 2 errors.
+# Compile of convolutional.vhd failed with 1 errors.
+# Compile of tb_CNV.vhd was successful.
+# Compile of conv.vhd was successful.
+# Compile of tb_CNV2.vhd was successful.
+# Compile of code_generator.vhd failed with 5 errors.
+# Compile of CNV_tb2.vhd was successful.
+# 6 compiles, 2 failed with 6 errors.
+# Compile of convolutional.vhd failed with 1 errors.
+# Compile of tb_CNV.vhd was successful.
+# Compile of conv.vhd was successful.
+# Compile of tb_CNV2.vhd was successful.
+# Compile of code_generator.vhd was successful.
+# Compile of CNV_tb2.vhd was successful.
+# 6 compiles, 1 failed with 1 error.
+# Compile of convolutional.vhd failed with 1 errors.
+# Compile of tb_CNV.vhd was successful.
+# Compile of conv.vhd was successful.
+# Compile of tb_CNV2.vhd was successful.
+# Compile of code_generator.vhd was successful.
+# 5 compiles, 2 failed with 1 error.
+# Compile of convolutional.vhd failed with 1 errors.
+# Compile of tb_CNV.vhd was successful.
+# Compile of conv.vhd was successful.
+# Compile of tb_CNV2.vhd was successful.
+# Compile of code_generator.vhd was successful.
+# Compile of CNV_tb2.vhd was successful.
+# 6 compiles, 2 failed with 1 error.
+# Compile of convolutional.vhd failed with 1 errors.
+# Compile of tb_CNV.vhd was successful.
+# Compile of conv.vhd was successful.
+# Compile of tb_CNV2.vhd was successful.
+# Compile of code_generator.vhd was successful.
+# Compile of CNV_tb2.vhd was successful.
+# 6 compiles, 1 failed with 1 error.
+# Compile of convolutional.vhd was successful.
+# Compile of tb_CNV.vhd was successful.
+# Compile of conv.vhd was successful.
+# Compile of tb_CNV2.vhd was successful.
+# Compile of code_generator.vhd was successful.
+# Compile of CNV_tb2.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of convolutional.vhd was successful.
+# Compile of tb_CNV.vhd was successful.
+# Compile of conv.vhd was successful.
+# Compile of tb_CNV2.vhd was successful.
+# Compile of code_generator.vhd was successful.
+# Compile of CNV_tb2.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+vsim work.cnv_tb2
+# vsim work.cnv_tb2 
+# Start time: 12:57:16 on Nov 28,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.cnv_tb2(bhv)
+# Loading work.cnv(struct)
+# ** Warning: (vsim-3473) Component instance "A_BUFFER : SHIFT_REG_N" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /cnv_tb2/DUT File: /home/lserafini/vhdl/course_proj/convolutional-codes-generator/src/convolutional.vhd
+# ** Warning: (vsim-3473) Component instance "C_BUFFER : SHIFT_REG_N" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /cnv_tb2/DUT File: /home/lserafini/vhdl/course_proj/convolutional-codes-generator/src/convolutional.vhd
+# Loading work.conv_generator(beh)
+# ** Fatal: (vsim-3348) Port length (10) does not match actual length (11) for port "/cnv_tb2/DUT/XOR_LOGIC/c_latest".
+#    Time: 0 ps  Iteration: 0  Instance: /cnv_tb2/DUT/XOR_LOGIC File: /home/lserafini/vhdl/course_proj/convolutional-codes-generator/src/code_generator.vhd Line: 20
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 12:57:17 on Nov 28,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 17
+# Compile of code_generator.vhd was successful.
+# Compile of convolutional.vhd was successful.
+# Compile of shift_register.vhd failed with 5 errors.
+# Compile of CNV_tb2.vhd was successful.
+# 4 compiles, 1 failed with 5 errors.
+# Compile of code_generator.vhd was successful.
+# Compile of convolutional.vhd was successful.
+# Compile of shift_register.vhd was successful.
+# Compile of CNV_tb2.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.cnv_tb2
+# vsim work.cnv_tb2 
+# Start time: 13:01:15 on Nov 28,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.cnv_tb2(bhv)
+# Loading work.cnv(struct)
+# Loading work.shift_reg_n(struct)
+# ** Fatal: (vsim-3348) Port length (5) does not match actual length (11) for port "/cnv_tb2/DUT/C_BUFFER/q".
+#    Time: 0 ps  Iteration: 0  Instance: /cnv_tb2/DUT/C_BUFFER File: /home/lserafini/vhdl/course_proj/convolutional-codes-generator/src/shift_register.vhd Line: 18
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 13:01:15 on Nov 28,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 9
+# Load canceled
+# Compile of code_generator.vhd was successful.
+# Compile of convolutional.vhd was successful.
+# Compile of shift_register.vhd was successful.
+# Compile of CNV_tb2.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.cnv_tb2
+# vsim work.cnv_tb2 
+# Start time: 13:02:47 on Nov 28,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.cnv_tb2(bhv)
+# Loading work.cnv(struct)
+# Loading work.shift_reg_n(struct)
+# Loading work.conv_generator(beh)
+# ** Fatal: (vsim-3348) Port length (10) does not match actual length (11) for port "/cnv_tb2/DUT/XOR_LOGIC/c_latest".
+#    Time: 0 ps  Iteration: 0  Instance: /cnv_tb2/DUT/XOR_LOGIC File: /home/lserafini/vhdl/course_proj/convolutional-codes-generator/src/code_generator.vhd Line: 20
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 13:02:47 on Nov 28,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+# Compile of code_generator.vhd was successful.
+# Compile of convolutional.vhd was successful.
+# Compile of shift_register.vhd was successful.
+# Compile of CNV_tb2.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.cnv_tb2
+# vsim work.cnv_tb2 
+# Start time: 13:04:42 on Nov 28,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.cnv_tb2(bhv)
+# Loading work.cnv(struct)
+# Loading work.shift_reg_n(struct)
+# ** Fatal: (vsim-3348) Port length (10) does not match actual length (11) for port "/cnv_tb2/DUT/C_BUFFER/q".
+#    Time: 0 ps  Iteration: 0  Instance: /cnv_tb2/DUT/C_BUFFER File: /home/lserafini/vhdl/course_proj/convolutional-codes-generator/src/shift_register.vhd Line: 18
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 13:04:42 on Nov 28,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+# Compile of code_generator.vhd was successful.
+# Compile of convolutional.vhd was successful.
+# Compile of shift_register.vhd was successful.
+# Compile of CNV_tb2.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.cnv_tb2
+# vsim work.cnv_tb2 
+# Start time: 13:06:08 on Nov 28,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.cnv_tb2(bhv)
+# Loading work.cnv(struct)
+# Loading work.shift_reg_n(struct)
+# Loading work.conv_generator(beh)
+# ** Fatal: (vsim-3348) Port length (10) does not match actual length (11) for port "/cnv_tb2/DUT/XOR_LOGIC/c_latest".
+#    Time: 0 ps  Iteration: 0  Instance: /cnv_tb2/DUT/XOR_LOGIC File: /home/lserafini/vhdl/course_proj/convolutional-codes-generator/src/code_generator.vhd Line: 20
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 13:06:08 on Nov 28,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+# Compile of code_generator.vhd was successful.
+# Compile of convolutional.vhd was successful.
+# Compile of shift_register.vhd was successful.
+# Compile of CNV_tb2.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.cnv_tb2
+# vsim work.cnv_tb2 
+# Start time: 13:07:00 on Nov 28,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.cnv_tb2(bhv)
+# Loading work.cnv(struct)
+# Loading work.shift_reg_n(struct)
+# Loading work.conv_generator(beh)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/cnv_tb2/clk_tb \
+sim:/cnv_tb2/rst_tb \
+sim:/cnv_tb2/a_k_in_tb \
+sim:/cnv_tb2/i_valid_tb \
+sim:/cnv_tb2/a_k_out_tb \
+sim:/cnv_tb2/c_k_tb \
+sim:/cnv_tb2/o_valid_tb \
+sim:/cnv_tb2/end_sim \
+sim:/cnv_tb2/a_buffer_tb \
+sim:/cnv_tb2/c_buffer_tb \
+sim:/cnv_tb2/exp_a_out \
+sim:/cnv_tb2/exp_c_out \
+sim:/cnv_tb2/exp_valid
+run -all
+# ** Note: >>> Rilascio reset iniziale al tempo 35000 ps
+#    Time: 35 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: >>> Avvio CASO LIMITE 2 (variazioni i_valid / dati non validi) al tempo 35000 ps
+#    Time: 35 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: [CASO LIMITE - i_valid rising] Fronte di salita di i_valid al tempo 55000 ps (fase: 2_VALID_TOGGLES         )
+#    Time: 55 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: [CASO LIMITE - i_valid falling] Discesa di i_valid (fine dato valido) al tempo 65000 ps (fase: 2_VALID_TOGGLES         )
+#    Time: 65 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: [CASO LIMITE - i_valid rising] Fronte di salita di i_valid al tempo 85000 ps (fase: 2_VALID_TOGGLES         )
+#    Time: 85 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: >>> Avvio CASO LIMITE 3 (burst continuo 12 cicli validi) al tempo 85000 ps
+#    Time: 85 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: [CASO LIMITE - i_valid falling] Discesa di i_valid (fine dato valido) al tempo 95000 ps (fase: 3_CONTINUOUS_BURST      )
+#    Time: 95 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: [CASO LIMITE - i_valid rising] Fronte di salita di i_valid al tempo 105000 ps (fase: 3_CONTINUOUS_BURST      )
+#    Time: 105 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Warning: [CASO LIMITE - o_valid > 1 ciclo] Rilevato o_valid='1' su due cicli consecutivi al tempo 125000 ps (fase: 3_CONTINUOUS_BURST      )
+#    Time: 125 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Error: [MISMATCH DATI] al tempo 125000 ps atteso (a,c)=('0','1') letto (a,c)=('0','0') (fase: 3_CONTINUOUS_BURST      )
+#    Time: 125 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Warning: [CASO LIMITE - o_valid > 1 ciclo] Rilevato o_valid='1' su due cicli consecutivi al tempo 135000 ps (fase: 3_CONTINUOUS_BURST      )
+#    Time: 135 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Warning: [CASO LIMITE - o_valid > 1 ciclo] Rilevato o_valid='1' su due cicli consecutivi al tempo 145000 ps (fase: 3_CONTINUOUS_BURST      )
+#    Time: 145 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Warning: [CASO LIMITE - o_valid > 1 ciclo] Rilevato o_valid='1' su due cicli consecutivi al tempo 155000 ps (fase: 3_CONTINUOUS_BURST      )
+#    Time: 155 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Warning: [CASO LIMITE - o_valid > 1 ciclo] Rilevato o_valid='1' su due cicli consecutivi al tempo 165000 ps (fase: 3_CONTINUOUS_BURST      )
+#    Time: 165 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Warning: [CASO LIMITE - o_valid > 1 ciclo] Rilevato o_valid='1' su due cicli consecutivi al tempo 175000 ps (fase: 3_CONTINUOUS_BURST      )
+#    Time: 175 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Error: [MISMATCH DATI] al tempo 175000 ps atteso (a,c)=('1','1') letto (a,c)=('1','0') (fase: 3_CONTINUOUS_BURST      )
+#    Time: 175 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Warning: [CASO LIMITE - o_valid > 1 ciclo] Rilevato o_valid='1' su due cicli consecutivi al tempo 185000 ps (fase: 3_CONTINUOUS_BURST      )
+#    Time: 185 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Error: [MISMATCH DATI] al tempo 185000 ps atteso (a,c)=('0','1') letto (a,c)=('0','0') (fase: 3_CONTINUOUS_BURST      )
+#    Time: 185 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Warning: [CASO LIMITE - o_valid > 1 ciclo] Rilevato o_valid='1' su due cicli consecutivi al tempo 195000 ps (fase: 3_CONTINUOUS_BURST      )
+#    Time: 195 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Warning: [CASO LIMITE - o_valid > 1 ciclo] Rilevato o_valid='1' su due cicli consecutivi al tempo 205000 ps (fase: 3_CONTINUOUS_BURST      )
+#    Time: 205 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Error: [MISMATCH DATI] al tempo 205000 ps atteso (a,c)=('0','0') letto (a,c)=('0','1') (fase: 3_CONTINUOUS_BURST      )
+#    Time: 205 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: >>> Avvio CASO LIMITE 4 (fine burst: i_valid 1->0) al tempo 205000 ps
+#    Time: 205 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Warning: [CASO LIMITE - o_valid > 1 ciclo] Rilevato o_valid='1' su due cicli consecutivi al tempo 215000 ps (fase: 4_END_OF_BURST          )
+#    Time: 215 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Error: [MISMATCH DATI] al tempo 215000 ps atteso (a,c)=('1','1') letto (a,c)=('1','0') (fase: 4_END_OF_BURST          )
+#    Time: 215 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Warning: [CASO LIMITE - o_valid > 1 ciclo] Rilevato o_valid='1' su due cicli consecutivi al tempo 225000 ps (fase: 4_END_OF_BURST          )
+#    Time: 225 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: [CASO LIMITE - i_valid falling] Discesa di i_valid (fine dato valido) al tempo 225000 ps (fase: 4_END_OF_BURST          )
+#    Time: 225 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Error: [MISMATCH DATI] al tempo 225000 ps atteso (a,c)=('0','1') letto (a,c)=('0','0') (fase: 4_END_OF_BURST          )
+#    Time: 225 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: >>> Avvio CASO LIMITE 5 (a_k_in='X' con i_valid='0') al tempo 235000 ps
+#    Time: 235 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: [CASO LIMITE - a_k_in='X'/'U' con i_valid='0'] Rilevato al tempo 255000 ps (a_k_in='X')
+#    Time: 255 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: [CASO LIMITE - a_k_in='X'/'U' con i_valid='0'] Rilevato al tempo 265000 ps (a_k_in='X')
+#    Time: 265 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: [CASO LIMITE - a_k_in='X'/'U' con i_valid='0'] Rilevato al tempo 275000 ps (a_k_in='X')
+#    Time: 275 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: [CASO LIMITE - i_valid rising] Fronte di salita di i_valid al tempo 285000 ps (fase: 5_X_WHEN_INVALID        )
+#    Time: 285 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: >>> Avvio CASO LIMITE 6 (reset a caldo rst_tb='0') al tempo 285000 ps
+#    Time: 285 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: [CASO LIMITE - i_valid falling] Discesa di i_valid (fine dato valido) al tempo 295000 ps (fase: 6_HOT_RESET             )
+#    Time: 295 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Error: [MISMATCH DATI] al tempo 295000 ps atteso (a,c)=('1','0') letto (a,c)=('1','1') (fase: 6_HOT_RESET             )
+#    Time: 295 ns  Iteration: 0  Instance: /cnv_tb2
+# ** Note: >>> Fine simulazione casi limite al tempo 335000 ps
+#    Time: 335 ns  Iteration: 0  Instance: /cnv_tb2
